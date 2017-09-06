@@ -21,7 +21,7 @@ mvn clean install
 
 Start application with
 ```
-java -jar target/izettle-test-assignment.jar server server-config.yml
+java -jar target/dropwizard-auth-demo.jar server server-config.yml
 ```
 
 To check that your application is running enter url `http://localhost:8080`

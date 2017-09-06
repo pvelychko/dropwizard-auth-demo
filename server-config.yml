@@ -1,0 +1,24 @@
+# Database
+database:
+  driverClass: org.postgresql.Driver
+  user: [INSERT YOUR USERNAME HERE]
+  password: [INSERT YOUR PASSWORD HERE]
+  url: jdbc:postgresql://horton.elephantsql.com:5432/[INSERT YOUR DATABASE NAME HERE]
+  initialSize: 2
+  minSize: 2
+  maxSize: 4
+  properties:
+    hibernate.hbm2ddl.auto: validate
+
+# Pac4J
+pac4j:
+  callbackUrl: /callback
+  clients:
+  - org.pac4j.core.client.direct.AnonymousClient: {}
+  authorizers:
+    mustBeAuth:
+      class: org.pac4j.core.authorization.authorizer.IsAuthenticatedAuthorizer
+      redirectionUrl: /profile/?mustBeAuth
+    mustBeAnon:
+      class: org.pac4j.core.authorization.authorizer.IsAnonymousAuthorizer
+      redirectionUrl: /?mustBeAnon
