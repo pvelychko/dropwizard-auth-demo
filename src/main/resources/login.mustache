@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Dropwizard auth demo</title>
+	    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+		<meta content="IE=9" http-equiv="X-UA-Compatible"></meta>
+		<meta name="author" content="Pavlo Velychko (pavlo.velychko[at]gmail.com)" />
+		<link rel="icon" type="image/png" href="/images/favicon.ico"></link>
+		<link rel="stylesheet" href="/css/bootstrap.min.css"></link>
+		<link rel="stylesheet" href="/css/styles.css"></link>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'></link>
+		<script type="text/javascript" src="/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">
+					<img alt="Brand" src="/images/favicon.ico" title="Home" alt="logo" />
+				</a>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<a href=".." class="btn btn-default" style="margin-bottom: 24px;">
+					<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Back
+				</a>
+				<form method="POST" action="{{callbackUrl}}" class="form-signin">
+        			<h2 class="form-signin-heading">Please sign in</h2>
+        			<label for="email" class="sr-only">E-mail address</label>
+        			<input id="email" type="text" name="username" class="form-control" placeholder="E-mail address" required autofocus />
+        			<label for="password" class="sr-only">Password</label>
+        			<input id="password" type="password" name="password" class="form-control" placeholder="Password" required />
+        			<div style="margin-top: 14px;">
+        				<button name="submit" type="submit" class="btn btn-lg btn-primary btn-block">Sign in</button>
+        			</div>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center" style="margin-top: 24px; padding: 24px 12px 0;">
+				<ul class="list-inline">
+					<li>Site design and development by Pavlo Velychko, 2017</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

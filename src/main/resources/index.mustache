@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Dropwizard auth demo</title>
+	    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+		<meta content="IE=9" http-equiv="X-UA-Compatible"></meta>
+		<meta name="author" content="Pavlo Velychko (pavlo.velychko[at]gmail.com)" />
+		<link rel="icon" type="image/png" href="/images/favicon.ico"></link>
+		<link rel="stylesheet" href="/css/bootstrap.min.css"></link>
+		<link rel="stylesheet" href="/css/styles.css"></link>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'></link>
+		<script type="text/javascript" src="/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">
+					<img alt="Brand" src="/images/favicon.ico" title="Home" alt="logo" />
+				</a>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-default">
+					<h1>Dropwizard auth demo</h1>
+					<h3>Developer task</h3>
+					<p>
+						Create an HTTP-based server API based on persistent storage (perhaps a database). You should also create a client consuming the API, demonstrating that the solution satisfies the below requirements.
+					</p>
+					<p>
+						<h5>Minimum requirements</h5>
+
+						The application should allow a user to:
+						<ol>
+							<li>Register</li>
+							<li>Authenticate</li>
+							<li>Access a list of timestamps showing the user's last 5 successful login attempts. The user should only be able to see it’s own list.</li>
+						</ol>
+					</p>
+					<h3>Implementation</h3>
+					<div class="panel-heading">
+						<h3 class="panel-title">Actions</h3>
+					</div>
+					<div class="panel-body text-center actions">
+						{{#user}}
+							<div>
+								<a href="/profile" class="btn btn-default btn-lg">
+									<span class="glyphicon glyphicon-user" aria-hidden="true"></span> My profile
+								</a>
+							</div>
+							<div style="margin-top: 24px;">
+								<a href="/logout" class="btn btn-danger btn-lg">
+									<span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Log out
+								</a>
+							</div>
+						{{/user}}
+						{{^user}}
+							<div>
+								<a href="/login" class="btn btn-warning btn-lg">
+									<span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login
+								</a>
+							</div>
+							<div style="margin-top: 24px;">
+								<a href="/register" class="btn btn-primary btn-lg">
+									<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Sign up
+								</a>
+							</div>
+						{{/user}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center" style="margin-top: 24px; padding: 24px 12px 0;">
+				<ul class="list-inline">
+					<li>Site design and development by Pavlo Velychko, 2017</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
